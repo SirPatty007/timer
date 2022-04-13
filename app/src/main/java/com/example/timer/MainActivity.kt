@@ -9,6 +9,8 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Button
+import android.widget.Toast
 import com.example.timer.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -30,8 +32,18 @@ class MainActivity : AppCompatActivity() {
 
         binding.fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
+                .setAction("Action", null).show()
         }
+
+
+        //Code von mir Start
+        val startTimerButton: Button = findViewById(R.id.button_start)
+        startTimerButton.setOnClickListener() {
+            Toast.makeText(this, "Button gedrückt", Toast.LENGTH_SHORT).show()
+        }
+        //Code von mir Ende
+
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
